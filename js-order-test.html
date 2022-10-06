@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Loading Order Test</title>
+
+    <script src="js-1.js" defer></script>
+    <script src="js-2.js" defer></script>
+</head>
+<body>
+    This is a JS loading order test. 
+    
+    <ul>
+        <li> <span style="background-color: red">JS-1</span>: Linked first in the head, deferred</li>
+        <li> <span style="background-color: yellow">JS-2</span>: Linked second in the head, deferred</li>
+        <li> <span style="background-color: orange">JS-3</span>: Linked before the closing body tag</li>
+    </ul>
+    <script src="js-3.js"></script>
+</body>
+</html>
